@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		2B02273627906C7300C70A47 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02273527906C7300C70A47 /* AppDelegate.swift */; };
 		2B02273827906C7300C70A47 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02273727906C7300C70A47 /* SceneDelegate.swift */; };
-		2B02273A27906C7300C70A47 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02273927906C7300C70A47 /* ViewController.swift */; };
-		2B02273D27906C7300C70A47 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B02273B27906C7300C70A47 /* Main.storyboard */; };
+		2B02273A27906C7300C70A47 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02273927906C7300C70A47 /* HomeViewController.swift */; };
+		2B02273D27906C7300C70A47 /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B02273B27906C7300C70A47 /* HomeViewController.storyboard */; };
 		2B02273F27906C7400C70A47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B02273E27906C7400C70A47 /* Assets.xcassets */; };
 		2B02274227906C7400C70A47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B02274027906C7400C70A47 /* LaunchScreen.storyboard */; };
+		2B02274D27906CCE00C70A47 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B02274C27906CCE00C70A47 /* Colors.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B02273227906C7300C70A47 /* Facebook_SDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Facebook_SDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B02273527906C7300C70A47 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B02273727906C7300C70A47 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B02273927906C7300C70A47 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2B02273C27906C7300C70A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2B02273927906C7300C70A47 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		2B02273C27906C7300C70A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/HomeViewController.storyboard; sourceTree = "<group>"; };
 		2B02273E27906C7400C70A47 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B02274127906C7400C70A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B02274327906C7400C70A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B02274C27906CCE00C70A47 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +60,110 @@
 			children = (
 				2B02273527906C7300C70A47 /* AppDelegate.swift */,
 				2B02273727906C7300C70A47 /* SceneDelegate.swift */,
-				2B02273927906C7300C70A47 /* ViewController.swift */,
-				2B02273B27906C7300C70A47 /* Main.storyboard */,
-				2B02273E27906C7400C70A47 /* Assets.xcassets */,
-				2B02274027906C7400C70A47 /* LaunchScreen.storyboard */,
+				2B02274927906C9200C70A47 /* Resources */,
+				2B02274E27906D1100C70A47 /* Core */,
+				2B02275127906D4100C70A47 /* Scenes */,
 				2B02274327906C7400C70A47 /* Info.plist */,
 			);
 			path = Facebook_SDK;
+			sourceTree = "<group>";
+		};
+		2B02274927906C9200C70A47 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2B02274B27906CC100C70A47 /* Colors */,
+				2B02274A27906CB000C70A47 /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2B02274A27906CB000C70A47 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				2B02273E27906C7400C70A47 /* Assets.xcassets */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		2B02274B27906CC100C70A47 /* Colors */ = {
+			isa = PBXGroup;
+			children = (
+				2B02274C27906CCE00C70A47 /* Colors.xcassets */,
+			);
+			path = Colors;
+			sourceTree = "<group>";
+		};
+		2B02274E27906D1100C70A47 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2B02274F27906D2000C70A47 /* Managers */,
+				2B02275027906D2E00C70A47 /* Extensions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2B02274F27906D2000C70A47 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		2B02275027906D2E00C70A47 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2B02275127906D4100C70A47 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				2B02275327906D6400C70A47 /* Launch Screen */,
+				2B02275227906D5100C70A47 /* Home Screen */,
+				2B02275627906DB200C70A47 /* FriendsList Screen */,
+				2B02275427906D8D00C70A47 /* Videos Screen */,
+				2B02275527906D9B00C70A47 /* Settings Screen */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		2B02275227906D5100C70A47 /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2B02273927906C7300C70A47 /* HomeViewController.swift */,
+				2B02273B27906C7300C70A47 /* HomeViewController.storyboard */,
+			);
+			path = "Home Screen";
+			sourceTree = "<group>";
+		};
+		2B02275327906D6400C70A47 /* Launch Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2B02274027906C7400C70A47 /* LaunchScreen.storyboard */,
+			);
+			path = "Launch Screen";
+			sourceTree = "<group>";
+		};
+		2B02275427906D8D00C70A47 /* Videos Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Videos Screen";
+			sourceTree = "<group>";
+		};
+		2B02275527906D9B00C70A47 /* Settings Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Settings Screen";
+			sourceTree = "<group>";
+		};
+		2B02275627906DB200C70A47 /* FriendsList Screen */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "FriendsList Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,8 +225,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B02274227906C7400C70A47 /* LaunchScreen.storyboard in Resources */,
+				2B02274D27906CCE00C70A47 /* Colors.xcassets in Resources */,
 				2B02273F27906C7400C70A47 /* Assets.xcassets in Resources */,
-				2B02273D27906C7300C70A47 /* Main.storyboard in Resources */,
+				2B02273D27906C7300C70A47 /* HomeViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B02273A27906C7300C70A47 /* ViewController.swift in Sources */,
+				2B02273A27906C7300C70A47 /* HomeViewController.swift in Sources */,
 				2B02273627906C7300C70A47 /* AppDelegate.swift in Sources */,
 				2B02273827906C7300C70A47 /* SceneDelegate.swift in Sources */,
 			);
@@ -147,12 +247,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2B02273B27906C7300C70A47 /* Main.storyboard */ = {
+		2B02273B27906C7300C70A47 /* HomeViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				2B02273C27906C7300C70A47 /* Base */,
 			);
-			name = Main.storyboard;
+			name = HomeViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		2B02274027906C7400C70A47 /* LaunchScreen.storyboard */ = {
@@ -294,7 +394,7 @@
 				INFOPLIST_FILE = Facebook_SDK/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HomeViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,7 +422,7 @@
 				INFOPLIST_FILE = Facebook_SDK/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = HomeViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
