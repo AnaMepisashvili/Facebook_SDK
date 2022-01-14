@@ -14,6 +14,15 @@
 		2B02273F27906C7400C70A47 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B02273E27906C7400C70A47 /* Assets.xcassets */; };
 		2B02274227906C7400C70A47 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B02274027906C7400C70A47 /* LaunchScreen.storyboard */; };
 		2B02274D27906CCE00C70A47 /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B02274C27906CCE00C70A47 /* Colors.xcassets */; };
+		2B02275927906F9000C70A47 /* TabBarController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B02275827906F9000C70A47 /* TabBarController.storyboard */; };
+		2B02275B279070AB00C70A47 /* FriendsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02275A279070AB00C70A47 /* FriendsListViewController.swift */; };
+		2B02275D279070B700C70A47 /* FriendsListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B02275C279070B700C70A47 /* FriendsListViewController.storyboard */; };
+		2B02275F279070DF00C70A47 /* VideosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B02275E279070DF00C70A47 /* VideosViewController.swift */; };
+		2B022761279070E600C70A47 /* VideosViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B022760279070E600C70A47 /* VideosViewController.storyboard */; };
+		2B0227632790710D00C70A47 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0227622790710D00C70A47 /* SettingsViewController.swift */; };
+		2B0227652790711400C70A47 /* SettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B0227642790711400C70A47 /* SettingsViewController.storyboard */; };
+		2B022768279078C500C70A47 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B022767279078C500C70A47 /* SignInViewController.swift */; };
+		2B02276A279078D100C70A47 /* SignInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B022769279078D100C70A47 /* SignInViewController.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +35,15 @@
 		2B02274127906C7400C70A47 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B02274327906C7400C70A47 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2B02274C27906CCE00C70A47 /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		2B02275827906F9000C70A47 /* TabBarController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabBarController.storyboard; sourceTree = "<group>"; };
+		2B02275A279070AB00C70A47 /* FriendsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsListViewController.swift; sourceTree = "<group>"; };
+		2B02275C279070B700C70A47 /* FriendsListViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FriendsListViewController.storyboard; sourceTree = "<group>"; };
+		2B02275E279070DF00C70A47 /* VideosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosViewController.swift; sourceTree = "<group>"; };
+		2B022760279070E600C70A47 /* VideosViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = VideosViewController.storyboard; sourceTree = "<group>"; };
+		2B0227622790710D00C70A47 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		2B0227642790711400C70A47 /* SettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SettingsViewController.storyboard; sourceTree = "<group>"; };
+		2B022767279078C500C70A47 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		2B022769279078D100C70A47 /* SignInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignInViewController.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,7 +137,9 @@
 		2B02275127906D4100C70A47 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				2B02275727906F6E00C70A47 /* TabBarController */,
 				2B02275327906D6400C70A47 /* Launch Screen */,
+				2B0227662790788C00C70A47 /* SignIn Screen */,
 				2B02275227906D5100C70A47 /* Home Screen */,
 				2B02275627906DB200C70A47 /* FriendsList Screen */,
 				2B02275427906D8D00C70A47 /* Videos Screen */,
@@ -148,6 +168,8 @@
 		2B02275427906D8D00C70A47 /* Videos Screen */ = {
 			isa = PBXGroup;
 			children = (
+				2B02275E279070DF00C70A47 /* VideosViewController.swift */,
+				2B022760279070E600C70A47 /* VideosViewController.storyboard */,
 			);
 			path = "Videos Screen";
 			sourceTree = "<group>";
@@ -155,6 +177,8 @@
 		2B02275527906D9B00C70A47 /* Settings Screen */ = {
 			isa = PBXGroup;
 			children = (
+				2B0227622790710D00C70A47 /* SettingsViewController.swift */,
+				2B0227642790711400C70A47 /* SettingsViewController.storyboard */,
 			);
 			path = "Settings Screen";
 			sourceTree = "<group>";
@@ -162,8 +186,27 @@
 		2B02275627906DB200C70A47 /* FriendsList Screen */ = {
 			isa = PBXGroup;
 			children = (
+				2B02275A279070AB00C70A47 /* FriendsListViewController.swift */,
+				2B02275C279070B700C70A47 /* FriendsListViewController.storyboard */,
 			);
 			path = "FriendsList Screen";
+			sourceTree = "<group>";
+		};
+		2B02275727906F6E00C70A47 /* TabBarController */ = {
+			isa = PBXGroup;
+			children = (
+				2B02275827906F9000C70A47 /* TabBarController.storyboard */,
+			);
+			path = TabBarController;
+			sourceTree = "<group>";
+		};
+		2B0227662790788C00C70A47 /* SignIn Screen */ = {
+			isa = PBXGroup;
+			children = (
+				2B022767279078C500C70A47 /* SignInViewController.swift */,
+				2B022769279078D100C70A47 /* SignInViewController.storyboard */,
+			);
+			path = "SignIn Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,8 +267,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B0227652790711400C70A47 /* SettingsViewController.storyboard in Resources */,
 				2B02274227906C7400C70A47 /* LaunchScreen.storyboard in Resources */,
+				2B02275D279070B700C70A47 /* FriendsListViewController.storyboard in Resources */,
+				2B02276A279078D100C70A47 /* SignInViewController.storyboard in Resources */,
 				2B02274D27906CCE00C70A47 /* Colors.xcassets in Resources */,
+				2B02275927906F9000C70A47 /* TabBarController.storyboard in Resources */,
+				2B022761279070E600C70A47 /* VideosViewController.storyboard in Resources */,
 				2B02273F27906C7400C70A47 /* Assets.xcassets in Resources */,
 				2B02273D27906C7300C70A47 /* HomeViewController.storyboard in Resources */,
 			);
@@ -238,9 +286,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B022768279078C500C70A47 /* SignInViewController.swift in Sources */,
+				2B02275F279070DF00C70A47 /* VideosViewController.swift in Sources */,
+				2B02275B279070AB00C70A47 /* FriendsListViewController.swift in Sources */,
 				2B02273A27906C7300C70A47 /* HomeViewController.swift in Sources */,
 				2B02273627906C7300C70A47 /* AppDelegate.swift in Sources */,
 				2B02273827906C7300C70A47 /* SceneDelegate.swift in Sources */,
+				2B0227632790710D00C70A47 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,7 +446,7 @@
 				INFOPLIST_FILE = Facebook_SDK/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = HomeViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = SignInViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -422,7 +474,7 @@
 				INFOPLIST_FILE = Facebook_SDK/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = HomeViewController;
+				INFOPLIST_KEY_UIMainStoryboardFile = SignInViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
