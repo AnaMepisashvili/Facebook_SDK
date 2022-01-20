@@ -14,7 +14,7 @@ class VideosViewController: UIViewController, UITableViewDataSource, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Friends"
+        title = "Videos"
         
         configTableView()
     }
@@ -33,6 +33,6 @@ class VideosViewController: UIViewController, UITableViewDataSource, UITableView
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return 290
     }
 }
