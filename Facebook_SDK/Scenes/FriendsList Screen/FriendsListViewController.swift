@@ -25,11 +25,10 @@ class FriendsListViewController: UIViewController, UITableViewDataSource, UITabl
     }
     
     func fetrchFriends() {
-        let token = "EAAHLlZCGjQWYBAHa2U8utqsUMgr8CWLQK2zgHYaKxmKFPr7VnGcPI4l1DQK2o9iGwZBokpNJvtDb79k3wKDxZBYfuG81PdIsR2sbFAyNZCMgyOctqtLxzMEST2pDmBMAfYSa4T7UfZCGDYfZC6G04cYzet9wUbAleFTO7QbZBCzZBJTsZBffLCkJmvM1jj0HitZAlXGFMDc2MTia49cgCXdF3F"
         let params = ["fields": "name, picture.type(large)"]
         let graphRequest = GraphRequest(graphPath: "me/friends",
                                         parameters: params,
-                                        tokenString: token,
+                                        tokenString: Constants.FBToken,
                                         version: nil,
                                         httpMethod: .get)
         graphRequest.start { (connection, result, error) in
@@ -59,7 +58,7 @@ class FriendsListViewController: UIViewController, UITableViewDataSource, UITabl
     
     func configTableView() {
         tableView.dataSource = self
-        tableView.delegate = self
+        tableView.delegate   = self
         tableView.registerNib(class: FriendsTableViewCell.self)
     }
     

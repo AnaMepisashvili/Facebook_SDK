@@ -16,36 +16,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook_icon" translatesAutoresizingMaskIntoConstraints="NO" id="oty-hv-YWt">
-                                <rect key="frame" x="114" y="178" width="200" height="200"/>
+                                <rect key="frame" x="114" y="118" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="5NW-bE-zpp"/>
                                     <constraint firstAttribute="width" constant="200" id="m40-mW-X2U"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nd-qj-oE9">
-                                <rect key="frame" x="100" y="693" width="228" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="YUf-oC-f3V"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="gray">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Log Out">
-                                            <attributes>
-                                                <font key="NSFont" size="16" name="Helvetica"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                    <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="baseBackgroundColor" red="0.31764705879999999" green="0.43529411759999997" blue="0.6588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="logOutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VpN-Cg-9ui"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ma-QR-8HD">
-                                <rect key="frame" x="20" y="418" width="388" height="20.666666666666686"/>
+                                <rect key="frame" x="20" y="358" width="388" height="20.666666666666686"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -54,11 +32,8 @@
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="oty-hv-YWt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="90" id="AQw-hd-VWe"/>
-                            <constraint firstItem="7nd-qj-oE9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="Bnp-Kb-l7W"/>
+                            <constraint firstItem="oty-hv-YWt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="30" id="AQw-hd-VWe"/>
                             <constraint firstItem="9Ma-QR-8HD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="DfK-tG-yCf"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7nd-qj-oE9" secondAttribute="trailing" constant="100" id="R3I-jF-ARt"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7nd-qj-oE9" secondAttribute="bottom" constant="100" id="eQr-zf-EZS"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Ma-QR-8HD" secondAttribute="trailing" constant="20" id="mPK-hi-v47"/>
                             <constraint firstItem="9Ma-QR-8HD" firstAttribute="top" secondItem="oty-hv-YWt" secondAttribute="bottom" constant="40" id="s37-tL-eHU"/>
                             <constraint firstItem="oty-hv-YWt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zdz-uw-cgm"/>

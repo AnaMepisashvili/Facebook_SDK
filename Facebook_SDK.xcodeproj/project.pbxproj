@@ -31,6 +31,7 @@
 		2BE2A44B27989A1700BD86C6 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2A44927989A1700BD86C6 /* FriendsTableViewCell.swift */; };
 		2BE2A44C27989A1700BD86C6 /* FriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2A44A27989A1700BD86C6 /* FriendsTableViewCell.xib */; };
 		2BE7FDCB279AE95A00600661 /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7FDCA279AE95A00600661 /* FriendsModel.swift */; };
+		2BE7FDCD279B10AB00600661 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7FDCC279B10AB00600661 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		2BE2A44927989A1700BD86C6 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		2BE2A44A27989A1700BD86C6 /* FriendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsTableViewCell.xib; sourceTree = "<group>"; };
 		2BE7FDCA279AE95A00600661 /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
+		2BE7FDCC279B10AB00600661 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8CC7C8F80DF3FB4E32D32757 /* Pods_Facebook_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Facebook_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -103,6 +105,7 @@
 				2B02274E27906D1100C70A47 /* Core */,
 				2B02275127906D4100C70A47 /* Scenes */,
 				2B02274327906C7400C70A47 /* Info.plist */,
+				2BE7FDCC279B10AB00600661 /* Constants.swift */,
 			);
 			path = Facebook_SDK;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 				2B9CEB31279AAFD700087376 /* VideosTableViewCell.swift in Sources */,
 				2B02275B279070AB00C70A47 /* FriendsListViewController.swift in Sources */,
 				2B02273A27906C7300C70A47 /* HomeViewController.swift in Sources */,
+				2BE7FDCD279B10AB00600661 /* Constants.swift in Sources */,
 				2B02273627906C7300C70A47 /* AppDelegate.swift in Sources */,
 				2B022773279847AA00C70A47 /* TableViewCellExtension.swift in Sources */,
 				2BE7FDCB279AE95A00600661 /* FriendsModel.swift in Sources */,
