@@ -10,13 +10,15 @@ import FBSDKLoginKit
 
 class SettingsViewController: UIViewController {
     
+    @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var profileImg: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        profileImg.layer.cornerRadius = profileImg.bounds.width/2
         title = "Settings"
         
-        ferchProfile()
+        fetrchProfile()
     }
     
     @IBAction func logOutButton(_ sender: Any) {
@@ -27,9 +29,9 @@ class SettingsViewController: UIViewController {
         self.navigationController?.popToRootViewController(animated: true)
     }
     
-    func ferchProfile() {
-        let token = AccessToken.current?.tokenString
-            let params = ["fields": "picture.type(large)"]
+    func fetrchProfile() {
+        let token = "EAAHLlZCGjQWYBAHa2U8utqsUMgr8CWLQK2zgHYaKxmKFPr7VnGcPI4l1DQK2o9iGwZBokpNJvtDb79k3wKDxZBYfuG81PdIsR2sbFAyNZCMgyOctqtLxzMEST2pDmBMAfYSa4T7UfZCGDYfZC6G04cYzet9wUbAleFTO7QbZBCzZBJTsZBffLCkJmvM1jj0HitZAlXGFMDc2MTia49cgCXdF3F"
+            let params = ["fields": "name, picture.type(large)"]
             let graphRequest = GraphRequest(graphPath: "me",
                                             parameters: params,
                                             tokenString: token,
@@ -37,22 +39,19 @@ class SettingsViewController: UIViewController {
                                             httpMethod: .get)
             graphRequest.start { (connection, result, error) in
 
-            if let err = error {
-                print("error: \(err)")
-            } else {
-                print("successful!")
-
                 guard let json = result as? NSDictionary else { return }
                 if let picture = json["picture"] as? NSDictionary,
                    let data = picture["data"] as? NSDictionary,
                    let url = data["url"] as? String {
                     print("\(url)")
                     let urlStr = URL(string: url)
-                    let data = try? Data(contentsOf: URL(string: "https://scontent.ftbs5-2.fna.fbcdn.net/v/t39.30808-6/242393884_1665289276996536_179147493713356190_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=AIY01Xtbw0EAX_wSGit&_nc_ht=scontent.ftbs5-2.fna&oh=00_AT-cqnxWWf5pf0lv61nuaNaE24SROLQAuU6TC_zUmwlHFQ&oe=61EEFA01")!)
-                    self.profileImg.image = UIImage(data: (data ?? .init())!)
+                    let imageData = try? Data(contentsOf: urlStr as! URL)
+                    self.profileImg.image = UIImage(data: imageData!)
+                }
+                if let fullName = json["name"] {
+                    self.fullNameLabel.text = fullName as! String
                 }
             }
         }
     }
-}
 

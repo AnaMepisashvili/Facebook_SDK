@@ -26,10 +26,11 @@
 		2B02276A279078D100C70A47 /* LogInViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B022769279078D100C70A47 /* LogInViewController.storyboard */; };
 		2B0227712798478900C70A47 /* TableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B0227702798478900C70A47 /* TableViewExtension.swift */; };
 		2B022773279847AA00C70A47 /* TableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B022772279847AA00C70A47 /* TableViewCellExtension.swift */; };
+		2B9CEB31279AAFD700087376 /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B9CEB2F279AAFD700087376 /* VideosTableViewCell.swift */; };
+		2B9CEB32279AAFD700087376 /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B9CEB30279AAFD700087376 /* VideosTableViewCell.xib */; };
 		2BE2A44B27989A1700BD86C6 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2A44927989A1700BD86C6 /* FriendsTableViewCell.swift */; };
 		2BE2A44C27989A1700BD86C6 /* FriendsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2A44A27989A1700BD86C6 /* FriendsTableViewCell.xib */; };
-		2BE2A45027989FE200BD86C6 /* VideosTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE2A44E27989FE200BD86C6 /* VideosTableViewCell.swift */; };
-		2BE2A45127989FE200BD86C6 /* VideosTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BE2A44F27989FE200BD86C6 /* VideosTableViewCell.xib */; };
+		2BE7FDCB279AE95A00600661 /* FriendsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7FDCA279AE95A00600661 /* FriendsModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,10 +56,11 @@
 		2B022769279078D100C70A47 /* LogInViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LogInViewController.storyboard; sourceTree = "<group>"; };
 		2B0227702798478900C70A47 /* TableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewExtension.swift; sourceTree = "<group>"; };
 		2B022772279847AA00C70A47 /* TableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellExtension.swift; sourceTree = "<group>"; };
+		2B9CEB2F279AAFD700087376 /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
+		2B9CEB30279AAFD700087376 /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
 		2BE2A44927989A1700BD86C6 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		2BE2A44A27989A1700BD86C6 /* FriendsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FriendsTableViewCell.xib; sourceTree = "<group>"; };
-		2BE2A44E27989FE200BD86C6 /* VideosTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideosTableViewCell.swift; sourceTree = "<group>"; };
-		2BE2A44F27989FE200BD86C6 /* VideosTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideosTableViewCell.xib; sourceTree = "<group>"; };
+		2BE7FDCA279AE95A00600661 /* FriendsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsModel.swift; sourceTree = "<group>"; };
 		8CC7C8F80DF3FB4E32D32757 /* Pods_Facebook_SDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Facebook_SDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -133,6 +135,7 @@
 		2B02274E27906D1100C70A47 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2BE7FDC9279AE94000600661 /* Model */,
 				2B02274F27906D2000C70A47 /* Managers */,
 				2B02275027906D2E00C70A47 /* Extensions */,
 			);
@@ -244,10 +247,18 @@
 		2BE2A44D27989FAF00BD86C6 /* VideosTableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				2BE2A44E27989FE200BD86C6 /* VideosTableViewCell.swift */,
-				2BE2A44F27989FE200BD86C6 /* VideosTableViewCell.xib */,
+				2B9CEB2F279AAFD700087376 /* VideosTableViewCell.swift */,
+				2B9CEB30279AAFD700087376 /* VideosTableViewCell.xib */,
 			);
 			path = VideosTableViewCell;
+			sourceTree = "<group>";
+		};
+		2BE7FDC9279AE94000600661 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2BE7FDCA279AE95A00600661 /* FriendsModel.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		7609BD1B4F9DD59FB8A28524 /* Frameworks */ = {
@@ -332,7 +343,7 @@
 				2B02274227906C7400C70A47 /* LaunchScreen.storyboard in Resources */,
 				2B02275D279070B700C70A47 /* FriendsListViewController.storyboard in Resources */,
 				2B02276A279078D100C70A47 /* LogInViewController.storyboard in Resources */,
-				2BE2A45127989FE200BD86C6 /* VideosTableViewCell.xib in Resources */,
+				2B9CEB32279AAFD700087376 /* VideosTableViewCell.xib in Resources */,
 				2B02274D27906CCE00C70A47 /* Colors.xcassets in Resources */,
 				2B02275927906F9000C70A47 /* TabBarController.storyboard in Resources */,
 				2B022761279070E600C70A47 /* VideosViewController.storyboard in Resources */,
@@ -394,11 +405,12 @@
 				2B022768279078C500C70A47 /* LogInViewController.swift in Sources */,
 				2B02275F279070DF00C70A47 /* VideosViewController.swift in Sources */,
 				2BE2A44B27989A1700BD86C6 /* FriendsTableViewCell.swift in Sources */,
-				2BE2A45027989FE200BD86C6 /* VideosTableViewCell.swift in Sources */,
+				2B9CEB31279AAFD700087376 /* VideosTableViewCell.swift in Sources */,
 				2B02275B279070AB00C70A47 /* FriendsListViewController.swift in Sources */,
 				2B02273A27906C7300C70A47 /* HomeViewController.swift in Sources */,
 				2B02273627906C7300C70A47 /* AppDelegate.swift in Sources */,
 				2B022773279847AA00C70A47 /* TableViewCellExtension.swift in Sources */,
+				2BE7FDCB279AE95A00600661 /* FriendsModel.swift in Sources */,
 				2B02273827906C7300C70A47 /* SceneDelegate.swift in Sources */,
 				2B0227632790710D00C70A47 /* SettingsViewController.swift in Sources */,
 			);

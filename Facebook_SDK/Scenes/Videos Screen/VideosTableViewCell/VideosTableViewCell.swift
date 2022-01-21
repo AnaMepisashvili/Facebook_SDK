@@ -2,7 +2,7 @@
 //  VideosTableViewCell.swift
 //  Facebook_SDK
 //
-//  Created by Ana Mepisashvili on 19.01.22.
+//  Created by Ana Mepisashvili on 21.01.22.
 //
 
 import UIKit

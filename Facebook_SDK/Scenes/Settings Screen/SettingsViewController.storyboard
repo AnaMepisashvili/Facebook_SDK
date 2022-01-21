@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="R7D-Ql-VWE">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,21 +12,20 @@
             <objects>
                 <viewController id="Y6W-OH-hqX" customClass="SettingsViewController" customModule="Facebook_SDK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Facebook_icon" translatesAutoresizingMaskIntoConstraints="NO" id="oty-hv-YWt">
-                                <rect key="frame" x="87" y="133" width="240" height="240"/>
+                                <rect key="frame" x="114" y="178" width="200" height="200"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="240" id="FxL-Kc-FXl"/>
-                                    <constraint firstAttribute="width" constant="240" id="j11-L9-piJ"/>
+                                    <constraint firstAttribute="height" constant="200" id="5NW-bE-zpp"/>
+                                    <constraint firstAttribute="width" constant="200" id="m40-mW-X2U"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7nd-qj-oE9">
-                                <rect key="frame" x="101.5" y="423.5" width="211" height="49"/>
+                                <rect key="frame" x="100" y="693" width="228" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="211" id="3Kw-Km-g4p"/>
-                                    <constraint firstAttribute="height" constant="49" id="IW4-23-MZe"/>
+                                    <constraint firstAttribute="height" constant="50" id="YUf-oC-f3V"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray">
@@ -45,22 +44,30 @@
                                     <action selector="logOutButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="VpN-Cg-9ui"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ma-QR-8HD">
+                                <rect key="frame" x="20" y="418" width="388" height="20.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="oty-hv-YWt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="45" id="05h-cq-Vbi"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="oty-hv-YWt" secondAttribute="trailing" constant="87" id="b7r-C5-BKA">
-                                <variation key="heightClass=regular-widthClass=compact" constant="87"/>
-                            </constraint>
-                            <constraint firstItem="7nd-qj-oE9" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="fW9-H9-EkU"/>
-                            <constraint firstItem="7nd-qj-oE9" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="rwz-2j-xuy"/>
-                            <constraint firstItem="oty-hv-YWt" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="87" id="yi9-V4-H7T"/>
+                            <constraint firstItem="oty-hv-YWt" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="90" id="AQw-hd-VWe"/>
+                            <constraint firstItem="7nd-qj-oE9" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="100" id="Bnp-Kb-l7W"/>
+                            <constraint firstItem="9Ma-QR-8HD" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="DfK-tG-yCf"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="7nd-qj-oE9" secondAttribute="trailing" constant="100" id="R3I-jF-ARt"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="7nd-qj-oE9" secondAttribute="bottom" constant="100" id="eQr-zf-EZS"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="9Ma-QR-8HD" secondAttribute="trailing" constant="20" id="mPK-hi-v47"/>
+                            <constraint firstItem="9Ma-QR-8HD" firstAttribute="top" secondItem="oty-hv-YWt" secondAttribute="bottom" constant="40" id="s37-tL-eHU"/>
+                            <constraint firstItem="oty-hv-YWt" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="zdz-uw-cgm"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="bsC-XL-uLy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="fullNameLabel" destination="9Ma-QR-8HD" id="oJ4-3t-IhR"/>
                         <outlet property="profileImg" destination="oty-hv-YWt" id="Wcn-vk-0U9"/>
                     </connections>
                 </viewController>
@@ -75,7 +82,7 @@
                     <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="8q5-DF-zc0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="c4f-JH-fvr">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

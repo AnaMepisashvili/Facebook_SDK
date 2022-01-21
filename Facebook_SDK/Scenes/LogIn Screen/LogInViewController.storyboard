@@ -16,22 +16,25 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Log In" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="deV-xk-AWY">
-                                <rect key="frame" x="20" y="341" width="374" height="43"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="374" id="tGx-0Q-CH4"/>
-                                    <constraint firstAttribute="height" constant="43" id="xvE-9s-gPN"/>
-                                </constraints>
+                                <rect key="frame" x="20" y="352.5" width="374" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q70-cY-iG4">
+                                <rect key="frame" x="195" y="441" width="24" height="14"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" red="0.23921568627450979" green="0.33333333333333331" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="deV-xk-AWY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="LOP-7F-SY7"/>
-                            <constraint firstItem="deV-xk-AWY" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="297" id="oAa-E4-n3V"/>
-                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="deV-xk-AWY" secondAttribute="trailing" constant="20" id="rGz-2m-t4p"/>
+                            <constraint firstItem="deV-xk-AWY" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="0Sn-Qk-avV"/>
+                            <constraint firstItem="Q70-cY-iG4" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="6gn-cx-tuD"/>
+                            <constraint firstItem="Q70-cY-iG4" firstAttribute="top" secondItem="deV-xk-AWY" secondAttribute="bottom" constant="57" id="Igd-NL-tOb"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="deV-xk-AWY" secondAttribute="trailing" constant="20" id="YOs-k8-iua"/>
+                            <constraint firstItem="Q70-cY-iG4" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="qw8-zL-YCV"/>
                         </constraints>
                     </view>
                 </viewController>
