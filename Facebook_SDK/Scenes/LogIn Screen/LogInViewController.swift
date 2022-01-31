@@ -10,10 +10,7 @@ class LogInViewController: UIViewController, LoginButtonDelegate {
     
     private let fbLoginButton: FBLoginButton = FBLoginButton()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
+    //MARK: - LifeCycle
     override func viewDidAppear(_ animated: Bool) {
         if AccessToken.isCurrentAccessTokenActive {
             openTabViewController()
@@ -23,6 +20,7 @@ class LogInViewController: UIViewController, LoginButtonDelegate {
         }
     }
     
+    //MARK: - Functions
     private func addFBLoginButton() {
         fbLoginButton.delegate = self
         fbLoginButton.center = view.center
@@ -32,9 +30,7 @@ class LogInViewController: UIViewController, LoginButtonDelegate {
     }
     
     func loginButton(_ loginButton: FBLoginButton, didCompleteWith result: LoginManagerLoginResult?, error: Error?) {
-        
         self.fbLoginButton.removeFromSuperview()
-        
         let request = FBSDKLoginKit.GraphRequest(graphPath: "me",
                                                  parameters: ["fields": "email, name"],
                                                  tokenString: Constants.FBToken,

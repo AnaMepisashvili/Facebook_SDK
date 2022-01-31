@@ -10,14 +10,16 @@ import UIKit
 
 class VideosViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
+    //MARK: - Variables
     private var videosList: [VideosModel] = [] {
         didSet {self.tableView.reloadData()}
     }
     var videosViewModel = VideosViewModel()
-  
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Videos"
@@ -26,6 +28,7 @@ class VideosViewController: UIViewController, UITableViewDataSource, UITableView
         configureViewModel()
     }
     
+    //MARK: - Functions
     func configureViewModel() {
         videosViewModel.fetrchVideos()
         videosViewModel.reload = { videos in
@@ -37,18 +40,17 @@ class VideosViewController: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
         tableView.delegate = self
         tableView.registerNib(class: VideosTableViewCell.self)
-//        tableView.allowsSelection = UIColor.white
+        //        tableView.allowsSelection = false
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return videosList.count
-    }
+    //MARK: - DataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.deque(class: VideosTableViewCell.self, for: indexPath)
         cell.configureVideo(with: videosList[indexPath.row])
         return cell
     }
+    //MARK: - Delegate
     
     func scrollViewwillBeginDragging(_ scrollView: UIScrollView) {
         let cells = tableView.visibleCells.compactMap({ $0 as? VideosTableViewCell })
@@ -63,11 +65,14 @@ class VideosViewController: UIViewController, UITableViewDataSource, UITableView
         if let cell = tableView.cellForRow(at: indexPath) as? VideosTableViewCell {
             if cell.playing {
                 cell.stopVideo()
-            }
-            else {
+            } else {
                 cell.startVideo()
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return videosList.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

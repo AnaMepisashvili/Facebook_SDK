@@ -7,13 +7,21 @@
 
 import UIKit
 import FBSDKLoginKit
+
 class VideosViewModel: NSObject {
+    
+    //MARK: - Variables
     private var videosList: [VideosModel] = []
     var reload: (([VideosModel])->Void)?
     
+    //MARK: - Functions
     func fetrchVideos() {
         let params = ["fields": "message, source, created_time"]
-        let request: GraphRequest = GraphRequest(graphPath: "me/feed", parameters: params, tokenString: Constants.FBToken, version: nil, httpMethod: .get)
+        let request: GraphRequest = GraphRequest(graphPath: "me/feed",
+                                                 parameters: params,
+                                                 tokenString: Constants.FBToken,
+                                                 version: nil,
+                                                 httpMethod: .get)
         request.start { (_, result, error) in
             if let data: [String: Any] = result as? [String: Any] {
                 DispatchQueue.main.async {
@@ -26,14 +34,12 @@ class VideosViewModel: NSObject {
                             let newVideoModel = VideosModel(created_time:  createdTime,
                                                             message: message,
                                                             video_url: source)
-                            self.videosList.append(newVideoModel)
+                            if newVideoModel.video_url != "" {
+                                self.videosList.append(newVideoModel)
+                            }
                         }
                     }
-                    //                DispatchQueue.main.async {
-                    //                                self.tableView.reloadData()
                     self.reload?(self.videosList)
-                    
-                    //                            }
                 }
             }
         }

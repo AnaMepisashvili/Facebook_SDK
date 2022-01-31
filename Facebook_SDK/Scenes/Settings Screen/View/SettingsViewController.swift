@@ -10,13 +10,14 @@ import FBSDKLoginKit
 
 class SettingsViewController: UIViewController, LoginButtonDelegate {
     
-    private let fbLoginButton: FBLoginButton = FBLoginButton()
-    
+    //MARK: - Variables
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var profileImg: UIImageView!
     
+    private let fbLoginButton: FBLoginButton = FBLoginButton()
     var settingsViewModel = SettingsViewModel()
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         profileImg.layer.cornerRadius = profileImg.bounds.width/2
@@ -26,6 +27,7 @@ class SettingsViewController: UIViewController, LoginButtonDelegate {
         configureViewModel()
     }
     
+    //MARK: - Functions
     func configureViewModel() {
         settingsViewModel.fetrchProfile()
         settingsViewModel.image = { data in
@@ -54,6 +56,5 @@ class SettingsViewController: UIViewController, LoginButtonDelegate {
         vc.modalPresentationStyle = .fullScreen
         self.present(vc, animated: true, completion: nil)
     }
-    
 }
 

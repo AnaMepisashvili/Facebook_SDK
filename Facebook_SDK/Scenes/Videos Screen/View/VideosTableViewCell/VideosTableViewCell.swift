@@ -11,10 +11,12 @@ import AVFoundation
 
 class VideosTableViewCell: UITableViewCell {
     
+    //MARK: - Outlets
     @IBOutlet weak var videoView: VideoView!
     @IBOutlet weak var createdTimeLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    //MARK: - Variables
     private var queuePlayer = AVQueuePlayer()
     private var playerLayer = AVPlayerLayer()
     private var looperPlayer: AVPlayerLooper?
@@ -28,17 +30,18 @@ class VideosTableViewCell: UITableViewCell {
         }
     }
     
+    //MARK: - Functions
     func configureVideo(with video: VideosModel) {
         descriptionLabel.text = video.message
         videoUrl = NSURL(string: video.video_url) as URL?
         createdTimeLabel.text = video.created_time
-
     }
+    
     func configureVideo(with video: PostsModel) {
         descriptionLabel.text = video.message
         videoUrl = NSURL(string: video.video_url) as URL?
     }
-   
+    
     func startVideo() {
         queuePlayer.play()
         playing = true

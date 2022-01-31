@@ -8,7 +8,7 @@
 import Foundation
 
 struct PostsModel {
-    let message: String?
-    let picture_url: String
-    let video_url: String
+    var message: String?
+    var picture_url: String
+    var video_url: String
 }

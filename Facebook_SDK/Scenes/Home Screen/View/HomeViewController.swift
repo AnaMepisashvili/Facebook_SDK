@@ -8,34 +8,27 @@
 import FBSDKLoginKit
 import UIKit
 
-//enum Cell: String {
-//    case videoCell = "VideoTableViewCell"
-//    case postCell = "PostsTableViewCell"
-//}
-
 class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
+
+    //MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
     
-//    private var postsList: [PostsModel] = [] {
-//        didSet {
-//            self.tableView.reloadData()
-//        }
-//    }
+    //MARK: - Variables
     private var postsList: [PostsModel] = [] {
         didSet {self.tableView.reloadData()}
     }
     var postsViewModel = PostsViewModel()
     
+    //MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Home"
         
-//        fetrchPosts()
         configTableView()
         configureViewModel()
     }
     
+    //MARK: - Functions
     func configureViewModel() {
         postsViewModel.fetrchPosts()
         postsViewModel.reload = { posts in
@@ -43,58 +36,13 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         }
     }
     
-    
-    
-//    func fetrchPosts() {
-//        let params = ["fields": "message, source, full_picture"]
-//        let request: GraphRequest = GraphRequest(graphPath: "me/feed", parameters: params, tokenString: Constants.FBToken, version: nil, httpMethod: .get)
-//        request.start { (_, result, error) in
-//            if let data: [String: Any] = result as? [String: Any] {
-//                DispatchQueue.main.async {
-//                    if let array = data["data"] as? [[String: Any]] {
-//                        for video in array {
-//                            let image = video["full_picture"] as? String
-//                            let message = video["message"] as? String
-//                            let source = video["source"] as? String ?? ""
-//                            
-//                            let newPostModel = PostsModel(message: message,
-//                                                          picture_url: image ?? "",
-//                                                          video_url: source)
-//                            self.postsList.append(newPostModel)
-//                        }
-//                    }
-//                    DispatchQueue.main.async {
-//                        self.tableView.reloadData()
-//                    }
-//                }
-//            }
-//        }
-//    }
-    
     func configTableView() {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.registerNib(class: PostsTableViewCell.self)
         tableView.registerNib(class: VideosTableViewCell.self)
-        
-        //        tableView.register(VideoTableViewCell.self, forCellReuseIdentifier: "VideoTableViewCell")
-        //        tableView.register(PostsTableViewCell.self, forCellReuseIdentifier: "PostsTableViewCell")
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return postsList.count
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let cell = tableView.cellForRow(at: indexPath) as? VideosTableViewCell {
-            if cell.playing {
-                cell.stopVideo()
-            }
-            else {
-                cell.startVideo()
-            }
-        }
-    }
+    //MARK: - DataSource
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if postsList[indexPath.row].video_url == "" {
@@ -109,14 +57,35 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         } else {
             let cell = tableView.deque(class: VideosTableViewCell.self, for: indexPath)
             cell.configureVideo(with: postsList[indexPath.row])
-//            cell.descriptionLabel.text = postsList[indexPath.row].message
-//            if let url = URL(string:postsList[indexPath.item].video_url) {
-//            cell.videoURL = url
-            
             return cell
         }
     }
-
+    //MARK: - Delegate
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        
+        if self.postsList.count == indexPath.row + 1 {
+            postsViewModel.pagination { post in
+                self.postsList.append(contentsOf: post)
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let cell = tableView.cellForRow(at: indexPath) as? VideosTableViewCell {
+            if cell.playing {
+                cell.stopVideo()
+            } else {
+                cell.startVideo()
+            }
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postsList.count
+    }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 250
     }

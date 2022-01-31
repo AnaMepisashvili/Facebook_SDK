@@ -205,8 +205,8 @@
 		2B02275427906D8D00C70A47 /* Videos Screen */ = {
 			isa = PBXGroup;
 			children = (
-				2BE47C0E27A807030026C6CF /* ViewModel */,
 				2BE47C0D27A806EE0026C6CF /* View */,
+				2BE47C0E27A807030026C6CF /* ViewModel */,
 			);
 			path = "Videos Screen";
 			sourceTree = "<group>";
@@ -330,8 +330,8 @@
 		2BE47C1127A808E80026C6CF /* View */ = {
 			isa = PBXGroup;
 			children = (
-				2B02273B27906C7300C70A47 /* HomeViewController.storyboard */,
 				2B02273927906C7300C70A47 /* HomeViewController.swift */,
+				2B02273B27906C7300C70A47 /* HomeViewController.storyboard */,
 				2B58B45E279EC38A00A38849 /* PostsTableViewCell */,
 			);
 			path = View;

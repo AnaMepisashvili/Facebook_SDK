@@ -8,12 +8,8 @@
 import UIKit
 
 class FriendsTableViewCell: UITableViewCell {
-
+    
+    //MARK: - Outlets
     @IBOutlet weak var fullNameLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-
-    }
 }
