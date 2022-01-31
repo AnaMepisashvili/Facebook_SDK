@@ -10,5 +10,4 @@ import Foundation
 struct FriendsModel {
     let name: String
     let pictureUrl: String
-    
 }

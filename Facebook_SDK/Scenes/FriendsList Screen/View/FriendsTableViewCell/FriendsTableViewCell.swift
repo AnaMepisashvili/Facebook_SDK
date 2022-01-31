@@ -16,9 +16,4 @@ class FriendsTableViewCell: UITableViewCell {
         super.awakeFromNib()
 
     }
-    
-    func configure() {
-        
-    }
-    
 }

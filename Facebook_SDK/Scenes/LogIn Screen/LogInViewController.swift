@@ -7,7 +7,7 @@ import FBSDKLoginKit
 
 // Add this to the body
 class LogInViewController: UIViewController, LoginButtonDelegate {
-            
+    
     private let fbLoginButton: FBLoginButton = FBLoginButton()
     
     override func viewDidLoad() {
@@ -27,7 +27,7 @@ class LogInViewController: UIViewController, LoginButtonDelegate {
         fbLoginButton.delegate = self
         fbLoginButton.center = view.center
         fbLoginButton.permissions = ["public_profile", "email"]
-
+        
         view.addSubview(fbLoginButton)
     }
     

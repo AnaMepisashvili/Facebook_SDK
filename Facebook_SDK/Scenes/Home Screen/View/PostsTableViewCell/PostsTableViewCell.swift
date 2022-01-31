@@ -1,14 +1,17 @@
 //
-//  VideosTableViewCell.swift
+//  HomeTableViewCell.swift
 //  Facebook_SDK
 //
-//  Created by Ana Mepisashvili on 21.01.22.
+//  Created by Ana Mepisashvili on 24.01.22.
 //
 
 import UIKit
 
-class VideosTableViewCell: UITableViewCell {
+class PostsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var descriptionLab: UILabel!
+    @IBOutlet weak var postImg: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,5 +22,4 @@ class VideosTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
 }
