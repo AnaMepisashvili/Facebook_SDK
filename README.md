@@ -14,7 +14,7 @@ or use your test users token and paste it in the app Facebook/Core/FBToken/Const
 
 Root - Tabbar View Controller
 2. Home Feed
-	- Display posts with pagination
+	- Display posts with pagination, infinite scroll
 	- Description, image, video
 
 ![home](https://user-images.githubusercontent.com/85555767/151987948-460bc922-1e97-4b51-a926-4660207092b7.gif)
