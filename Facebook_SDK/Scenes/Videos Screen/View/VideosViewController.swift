@@ -52,7 +52,7 @@ class VideosViewController: UIViewController, UITableViewDataSource, UITableView
     }
     //MARK: - Delegate
     
-    func scrollViewwillBeginDragging(_ scrollView: UIScrollView) {
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         let cells = tableView.visibleCells.compactMap({ $0 as? VideosTableViewCell })
         cells.forEach { videoCell in
             if videoCell.playing {
