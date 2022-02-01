@@ -19,7 +19,7 @@ class FriendsViewModel: NSObject {
         let params = ["fields": "name, picture.type(large)"]
         let graphRequest = GraphRequest(graphPath: "me/friends",
                                         parameters: params,
-                                        tokenString: Constants.FBTokenFriends,
+                                        tokenString: Constants.FBToken,
                                         version: nil,
                                         httpMethod: .get)
         graphRequest.start { (connection, result, error) in
