@@ -7,8 +7,8 @@ If token has expired, you wont't be able to see the user's data, so you need to 
 or use your test users token and paste it in the app Facebook/Core/Utilities/Strings and change the value of static let var token.
 
 1. Login
-	- Login With Facebook 
-  - Comes from Facebook SDK
+- Login With Facebook 
+- Comes from Facebook SDK
   
  ![Login](https://user-images.githubusercontent.com/85555767/151982188-32060ae4-cd7a-4370-aa27-4d5938b0c51b.gif)
 
@@ -16,8 +16,8 @@ Root - Tabbar View Controller
 2. Home Feed
 	- Display posts with pagination
 	- Description, image, video
-  
-![home](https://user-images.githubusercontent.com/85555767/151984776-9dc839e1-4d8f-4345-b4cb-7cfa665aa9dd.gif)
+
+![home](<img src="https://user-images.githubusercontent.com/85555767/151984776-9dc839e1-4d8f-4345-b4cb-7cfa665aa9dd.gif" width="250" height="250"/>)
   
 3. List Of My Friends with all possible information
 	- Fullname
@@ -39,8 +39,8 @@ Root - Tabbar View Controller
 ![logout](https://user-images.githubusercontent.com/85555767/151985870-5c4aab11-0c1d-4983-bac2-0bdb04044b7c.gif)
 
 # Build With 
-. XCode 13.2.1
-. Swift 5.5
+- XCode 13.2.1
+- Swift 5.5
 
 # Architecture
-. MVVM
+- MVVM
