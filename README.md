@@ -4,7 +4,7 @@ The App uses Facebook SDK, for this we need permissions and created Test User.
 To the fuctionality of the App you need to use users token and test user's token is updated sometimes.
 
 If token has expired, you wont't be able to see the user's data, so you need to change the token. For this you need to contect to developer 
-or use your test users token and paste it in the app Facebook/Core/Utilities/Strings and change the value of static let var token.
+or use your test users token and paste it in the app Facebook/Core/FBToken/Constants and change the value of static let var token.
 
 1. Login
 - Login With Facebook 
