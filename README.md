@@ -9,34 +9,35 @@ or use your test users token and paste it in the app Facebook/Core/Utilities/Str
 1. Login
 - Login With Facebook 
 - Comes from Facebook SDK
-  
- ![Login](https://user-images.githubusercontent.com/85555767/151982188-32060ae4-cd7a-4370-aa27-4d5938b0c51b.gif)
+ 
+![login](https://user-images.githubusercontent.com/85555767/151987835-33ff589e-b521-439e-aa4a-f7265fc7df8b.gif)
 
 Root - Tabbar View Controller
 2. Home Feed
 	- Display posts with pagination
 	- Description, image, video
 
-![home](<img src="https://user-images.githubusercontent.com/85555767/151984776-9dc839e1-4d8f-4345-b4cb-7cfa665aa9dd.gif" width="250" height="250"/>)
+![home](https://user-images.githubusercontent.com/85555767/151987948-460bc922-1e97-4b51-a926-4660207092b7.gif)
+
   
 3. List Of My Friends with all possible information
 	- Fullname
 	- imageUrl
-  
-![friends](https://user-images.githubusercontent.com/85555767/151985037-f273843c-2077-4600-bdba-c69d027fa6a9.gif)
+	
+  ![friends](https://user-images.githubusercontent.com/85555767/151988060-5c874b09-3238-44fe-b22d-6df4d4d59eed.gif)
 
 4. Videos
 	- Display videos from your facebook Feed SDK
 	- created time, description, video 
 	- If you tap play, video should start playing
-  
-![videos](https://user-images.githubusercontent.com/85555767/151985530-c43ba0e4-fd9f-4d61-9633-672958befe6b.gif)
+	
+  ![videos](https://user-images.githubusercontent.com/85555767/151988074-d5e4ff7d-4542-4e12-bfdb-5625b99ee6ad.gif)
 
 5. Settings
 	- Log Out
 	- Display my avatar + full name
   
-![logout](https://user-images.githubusercontent.com/85555767/151985870-5c4aab11-0c1d-4983-bac2-0bdb04044b7c.gif)
+  ![logout](https://user-images.githubusercontent.com/85555767/151988053-3f3bfc27-c3d4-48e7-a77a-93e350457e40.gif)
 
 # Build With 
 - XCode 13.2.1
