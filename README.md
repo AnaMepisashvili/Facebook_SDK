@@ -30,6 +30,7 @@ Root - Tabbar View Controller
 	- Display videos from your facebook Feed SDK
 	- created time, description, video 
 	- If you tap play, video should start playing
+	- if you scroll to next video, all other videos must be stopped
 	
   ![videos](https://user-images.githubusercontent.com/85555767/151988074-d5e4ff7d-4542-4e12-bfdb-5625b99ee6ad.gif)
 
